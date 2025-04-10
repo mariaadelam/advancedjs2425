@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //polimorfism de mostenire
+        //2 clase copil care au aceeasi metoda mostenita din clasa parinte, implementat diferit
+        //aici makeSound()
+        class Animal {
+            makesSound() {
+                console.log('Animal makes sound');
+            }
+        }
+
+        class Duck extends Animal {
+            makesSound() {
+                console.log('Mac Mac Mac');
+            }
+        }
+
+        class Cat extends Animal {
+            makesSound() {
+                console.log('miau miau miau');
+            }
+        }
+
+        const cat = new Cat();
+        cat.makesSound() 
+
+        const duck = new Duck();
+        duck.makesSound() 
+
+
+    </script>
+</body>
+
+</html>
