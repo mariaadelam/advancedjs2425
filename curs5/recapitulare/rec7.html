@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Vehicle {
+      constructor(name, color, type, year) {
+        this.name = name;
+        this.year = year;
+        this.color = color;
+        this.type = type;
+      };
+      info() {
+        return `Vehicle: ${this.name}, Year: ${this.year}, Color: ${this.color}, Type: ${this.type}`;
+      };
+      start() {
+        return `${this.name} is starting...`;
+      };
+      stop() {
+        return `${this.name} is stopping...`;
+      };
+      pickUpPassengers() {
+        return `${this.name} is picking up passengers...`;
+      };
+      dropOffPassengers() {
+        return `${this.name} is dropping off passengers...`;
+      };
+    };
+
+    const vehicle1 = new Vehicle("Motorbike", "Red", "Sedan", 2020);
+    const vehicle2 = new Vehicle("Bus", "Blue", "Public Transport", 2018);
+    console.log(vehicle1.info());
+    console.log(vehicle1.start());
+    console.log(vehicle1.stop());
+    console.log(vehicle1.pickUpPassengers());
+    console.log(vehicle1.dropOffPassengers());
+  </script>
+</body>
+</html>

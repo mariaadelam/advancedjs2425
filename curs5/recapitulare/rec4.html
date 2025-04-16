@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person = {
+      name: "Dan",
+      age: 30,  
+      job: "software developer",
+      country: "Nigeria",
+      car: "Ford",
+      description: function() {
+        return `${this.name} - ${this.age} - ${this.job.role} - ${this.country.name} - ${this.car.name}.`;
+      }
+    };
+    console.log(person.description); 
+    //afiseaza descrierea functiei:
+    /*ƒ () {
+        return `${this.name} - ${this.age} - ${this.job.role} - ${this.country.name} - ${this.car.name}.`;
+      }
+        pentru a afisa ceea ce returneaza functia trebuia apelata cu ()*/
+    console.log(person.name);
+    
+  </script>
+</body>
+</html>

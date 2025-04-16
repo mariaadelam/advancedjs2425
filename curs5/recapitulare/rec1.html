@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const user  = {
+      fname: 'Ion',
+      lname: 'Popescu',
+    };
+
+    const copy1 = user; // shallow copy
+    const copy2 = Object.assign({}, user); // shallow copy //genereaza alta zona de memorie independenta
+    //asignez unui obiect gol toate valorile lui user
+    copy1.fname = 'Dan'; // changing copy1 does not affect user
+    copy2.lname = 'Ana'; // changing copy2 does not affect user
+
+    console.log('original:', user); // { fname: 'Ion', lname: 'Popescu' }
+    console.log('copy1:', copy1); // { fname: 'George', lname: 'Popescu' }  
+    console.log('copy2:', copy2); // { fname: 'Ion', lname: 'Ana' }
+  </script>
+</body>
+</html>

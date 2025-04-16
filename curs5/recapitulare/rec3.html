@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var number = 10;
+    var display = function() {
+      console.log(number);
+      var number = 20;
+    };
+    display();
+    //10 - gresit
+    //20 - gresit
+    //undefined - corect
+
+    /*Explicatie:
+    În funcția display, există o redeclarație a variabilei number folosind var. Aceasta cauzează hoisting, ceea ce înseamnă că declarația var number este mutată la începutul funcției, dar fără inițializare. Astfel, codul devine echivalent cu:
+    var display = function() {
+    var number; // Hoisting: variabila este declarată, dar nu inițializată
+    console.log(number); // Accesarea variabilei înainte de inițializare -> undefined
+    number = 20; // Inițializarea variabilei
+    };
+    */
+  </script>
+</body>
+</html>

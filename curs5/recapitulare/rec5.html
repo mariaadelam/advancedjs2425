@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person = {
+      name: "Dan",
+      age: 30,  
+      job: "software developer",
+      country: "Nigeria",
+      car: "Ford",
+      description: function() {
+        return `${this.name} - ${this.age} - ${this.job} - ${this.country} - ${this.car}.`;
+      },
+    };
+
+    console.log(person.description());  // Apelarea functiei pentru a obtine descrierea
+    delete person.car;
+    console.log(person.description());  // Afiseaza descrierea dupa stergerea proprietatii "car"
+    delete person // nu se sterge obiectul cu delete
+    console.log(person.description());  // Afiseaza descrierea dupa stergerea obiectului "person"
+  </script>
+</body>
+</html>
